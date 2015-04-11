@@ -166,6 +166,11 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   removeItem(myGroceryList, "chips");
 
   var addItem = function(myGroceryList, item){
+    for(var i = 0; i < myGroceryList.length; i++){
+      if(item === myGroceryList[i]){
+        return myGroceryList;
+      }
+    }
     myGroceryList.push(item);
     return myGroceryList;
   }
